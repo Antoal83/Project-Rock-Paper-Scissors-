@@ -1,27 +1,27 @@
 function playRound(playerSelection, computerSelection) {
     // your code here!
-    if (playerSelection  == "Piedra" && computerSelection == "Tijera"){
+    if (playerSelection  == "Rock" && computerSelection == "Scissors"){
 
-        console.log("Has ganado, has seleccionado Piedra y la máquina Tijera") ;
+        console.log("You won, your selection has been Rock and the CPU Scissors") ;
         wonByUser++
 
-    }else if (playerSelection  == "Papel" && computerSelection == "Piedra"){
+    }else if (playerSelection  == "Paper" && computerSelection == "Rock"){
 
-        console.log("Has ganado, has seleccionado Papel y la máquina Piedra");
+        console.log("You won, your selection has been Paper and the CPU Rock");
         wonByUser++
 
-    }else if (playerSelection  == "Tijera" && computerSelection == "Papel"){
+    }else if (playerSelection  == "Scissors" && computerSelection == "Paper"){
 
-        console.log("Has ganado, has seleccionado Tijera y la máquina Papel");
+        console.log("You won, your selection has been Scissors and the CPU Paper");
         wonByUser++
 
     }else if (playerSelection  == computerSelection ){
 
-        console.log(`Habéis empatado la selección ha sido de ${playerSelection}`);
+        console.log(`You have drown both of you have selected ${playerSelection}`);
 
     }else{
 
-        console.log(`Has perdido La máquina ha seleccionado ${computerSelection} y tu ${playerSelection} `);
+        console.log(`You lost the CPU has choosen ${computerSelection} and you ${playerSelection} `);
         wonByCpu++;
     }
   }
@@ -35,15 +35,15 @@ function playRound(playerSelection, computerSelection) {
     let symbolToReturn = "";
     if(randomNumb == 1){
 
-        return symbolToReturn = "Piedra";
+        return symbolToReturn = "Rock";
 
     }else if(randomNumb == 2){
 
-        return symbolToReturn = "Papel";
+        return symbolToReturn = "Paper";
 
     }else{
 
-        return symbolToReturn = "Tijera";
+        return symbolToReturn = "Scissors";
 
     }
 
@@ -56,7 +56,7 @@ function playRound(playerSelection, computerSelection) {
 
   for(let i = 0; i < hoWmanyPlays; i++){
 
-    const playerSelection = prompt("Selecciona Piedra, papel o tijeras ");
+    const playerSelection = prompt("Select Rock, Paper o Scissorss ");
     const computerSelection = getComputerChoice();
   
     console.log(playRound(playerSelection, computerSelection));
